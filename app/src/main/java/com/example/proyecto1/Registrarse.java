@@ -4,18 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import kotlin.text.StringsKt;
-
-public class Usuario extends AppCompatActivity {
+public class Registrarse extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_usuario);
+        setContentView(R.layout.activity_registrarse);
     }
 
-    String NombreUsuario;
-    String Correo;
-    String CodigoUsuario;
-    int Fono;
+
+
 }

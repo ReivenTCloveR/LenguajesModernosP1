@@ -1,3 +1,15 @@
 <resources>
+
+    <!-- Texto NombreEmpresa encabezado -->
     <string name="app_name">LIRCAYHUB</string>
+    <!--text usuario -->
+    <string name="Usuario">Usuario</string>
+    <!--text contraseña -->
+    <string name="Contraseña">Contraseña</string>
+    <!--text email -->
+    <string name="email">email</string>
+    <!--text Registrar -->
+    <string name="Registrar">REGISTRAR</string>
+
+
 </resources>
