@@ -5,30 +5,169 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Usuario"
+
+
     android:background="@color/white">
 
-
+    <!--Header-->
     <LinearLayout
-        android:layout_width="392dp"
-        android:layout_height="71dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="1dp"
+        android:id="@+id/linearLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
         android:background="@color/material_dynamic_primary40"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
 
         <TextView
             android:id="@+id/textViewEmpresaNombre"
-            android:layout_width="175dp"
-            android:layout_height="32dp"
-            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/app_name"
             android:textColor="@color/white"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold"
 
             />
     </LinearLayout>
+
+    <!--body-->
+
+
+    <!-- botonos-->
+
+    <TextView
+        android:id="@+id/UsuarioNombre"
+        android:layout_width="220dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="88dp"
+        android:accessibilityHeading="true"
+        android:textColor="@color/black"
+        android:textColorHighlight="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop" />
+
+    <TextView
+        android:id="@+id/textFonoUsuario"
+        android:layout_width="120dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/Fono"
+        android:text="@string/Fono"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewfono"
+        app:layout_constraintTop_toBottomOf="@+id/textEmailUsuario" />
+
+    <TextView
+        android:id="@+id/viewemail"
+        android:layout_width="220dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:accessibilityHeading="true"
+        android:hint="@string/Email"
+        android:textColor="@color/black"
+        android:textColorHighlight="#000000"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UsuarioNombre" />
+
+    <TextView
+        android:id="@+id/viewfono"
+        android:layout_width="220dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:accessibilityHeading="true"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewemail" />
+
+    <TextView
+        android:id="@+id/textEmailUsuario"
+        android:layout_width="120dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/Email"
+        android:text="@string/Email"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/viewemail"
+        app:layout_constraintTop_toBottomOf="@+id/Bienvenido" />
+
+    <TextView
+        android:id="@+id/Bienvenido"
+        android:layout_width="120dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="88dp"
+        android:contentDescription="@string/Bienvenido"
+        android:focusable="true"
+        android:text="@string/Bienvenido"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@+id/UsuarioNombre"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutTop" />
+
+    <ImageButton
+        android:id="@+id/IrRecordatorio"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/white"
+        android:contentDescription="@string/IrRecordatorio"
+        android:onClick="IrRecordatorios"
+        android:scaleType="centerInside"
+        android:src="@drawable/recordatorio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:srcCompat="@drawable/recordatorio" />
+
+    <ImageButton
+        android:id="@+id/IrLugaresInteres"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/white"
+        android:contentDescription="@string/IrLugaresInteres"
+        android:onClick="IrLugaresInteres"
+        android:scaleType="centerInside"
+        android:src="@drawable/lugaresinteres"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@drawable/lugaresinteres" />
+
+    <ImageButton
+        android:id="@+id/IrListaCompra"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/white"
+        android:contentDescription="@string/IrListaCompra"
+        android:foregroundGravity="top"
+        android:onClick="IrListaCompra"
+        android:scaleType="centerInside"
+        android:src="@drawable/lista"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/IrRecordatorio"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toEndOf="@+id/IrLugaresInteres"
+        tools:srcCompat="@drawable/lista" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

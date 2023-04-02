@@ -1,30 +1,33 @@
 package com.example.proyecto1;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
-import javax.security.auth.callback.PasswordCallback;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity  extends AppCompatActivity {
 
-    private EditText editUsuarioText;
-    private PasswordCallback edittextPassword ;
+    private EditText Usuario_log;
+    //private KeyStore.PasswordProtection Pass_Log;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        Usuario_log =findViewById(R.id.Usuario_log);
+        //Pass_Log = () findViewById(R.id.Pass_Log);
+
 
     }
-    public void IrUsuario(View view){
-        Intent i = new Intent(this, Usuario.class);
-        startActivity(i);
-     }
+    //Metodo para Boton de LOGIN
+    public void IrUsuario(View view) {
+            Intent i = new Intent(this, Usuario.class);
+            i.putExtra("nombre", Usuario_log.getText().toString());
+            startActivity(i);    }
 
      public void IrRegistro(View view){
          Intent i = new Intent(this, Registrarse.class);
@@ -38,6 +41,7 @@ public class MainActivity  extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Log.i("start","start");
     }
     @Override
     protected void onResume() {

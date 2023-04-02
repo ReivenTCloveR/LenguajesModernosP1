@@ -10,6 +10,27 @@
     <string name="email">email</string>
     <!--text Registrar -->
     <string name="Registrar">REGISTRAR</string>
+    <string name="login">LOGIN</string>
 
+    <!--text Registrar -->
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="Fono">Fono: </string>
+    <string name="Email">Email: </string>
+
+
+    <!--Button navegacion usuario -->
+    <string name="IrLugaresInteres">Lugares de Interes</string>
+    <string name="IrListaCompra">Listas de Compras</string>
+    <string name="IrRecordatorio">Recordatorio</string>
+
+    <!--Button Menu  -->
+    <string name="InicioMenu">Inicio</string>
+    <string name="ListaDeCompraMenu">Listas de Compras</string>
+    <string name="LugaresDeInteresMenu">Lugares de Interes</string>
+    <string name="RecordatoriosMenu">Recordatorios</string>
+    <string name="todo">TODO</string>
+    <string name="tipo_cosas">Tipo_Cosas</string>
+    <string name="nombrelista">Nombrelista</string>
+    <string name="activa">Activa</string>
 
 </resources>

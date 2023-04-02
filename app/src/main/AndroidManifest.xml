@@ -12,20 +12,33 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".Registrarse"
+            android:name=".ListaCompras"
             android:exported="false" />
         <activity
+            android:name=".LugaresInteres"
+            android:exported="false" />
+        <activity
+            android:name=".Producto"
+            android:exported="false" />
+        <activity
+            android:name=".Recordatorios"
+            android:exported="false" /> <!-- REGISTRO DE USUARIO A LA BD -->
+        <activity
+            android:name=".Registrarse"
+            android:exported="false" /> <!-- PANTALLA USUARIO -->
+        <activity
             android:name=".Usuario"
-            android:exported="true">
+            android:exported="false" /> <!-- LOGIN -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            tools:ignore="ExtraText">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
     </application>
 
 </manifest>

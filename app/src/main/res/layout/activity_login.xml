@@ -7,12 +7,11 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editUsuarioText"
+        android:id="@+id/Usuario_log"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:ems="10"
         android:hint="@string/Usuario"
         android:inputType="textPersonName"
         android:text=""
@@ -23,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edittextPassword"
+        android:id="@+id/Pass_Log"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -33,7 +32,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editUsuarioText" />
+        app:layout_constraintTop_toBottomOf="@+id/Usuario_log" />
 
     <Button
         android:id="@+id/Login"
@@ -42,13 +41,13 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
-        android:text="LOGIN"
+        android:background="@drawable/button_login"
+        android:onClick="IrUsuario"
+        android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edittextPassword"
-        android:background="@drawable/button_login"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Pass_Log" />
 
     <Button
         android:id="@+id/Registrar"
@@ -70,13 +69,13 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/button_socialweb"
+        android:contentDescription="Log con Google"
         android:scaleType="fitCenter"
         android:src="@drawable/google"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Registrar"
-        android:background="@drawable/button_socialweb"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/Registrar" />
 
     <Button
         android:id="@+id/button3"
@@ -95,7 +94,7 @@
         android:layout_width="220dp"
         android:layout_height="213dp"
         android:src="@drawable/logoempresa"
-        app:layout_constraintBottom_toTopOf="@+id/editUsuarioText"
+        app:layout_constraintBottom_toTopOf="@+id/Usuario_log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
