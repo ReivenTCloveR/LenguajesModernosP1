@@ -3,9 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cv"
+    android:id="@+id/cv1"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     app:cardCornerRadius="20dp"
     app:cardElevation="2dp"
@@ -34,7 +34,7 @@
                 android:contentDescription="@string/todo"
                 android:paddingLeft="14dp"
                 android:paddingRight="14dp"
-                app:srcCompat="@drawable/carta" />
+                app:srcCompat="@drawable/reloj" />
 
             <LinearLayout
                 android:id="@+id/LinealLayout"
@@ -51,25 +51,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="2dp"
-                    android:text="@string/nombrelista"
+                    android:text="@string/NombreRecordatorio"
                     android:textSize="22sp"
                     android:textStyle="bold" />
 
+
                 <TextView
-                    android:id="@+id/cantidadTextView"
+                    android:id="@+id/DiaTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Cantidad"
+                    android:text="@string/Dia"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
-
+                    android:textStyle="bold"/>
                 <TextView
-                    android:id="@+id/tipoTextView"
+                    android:id="@+id/HoraTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/tipo_cosas"
+                    android:text="@string/Hora"
                     android:textSize="16sp" />
-
 
             </LinearLayout>
 
@@ -90,6 +89,7 @@
 
 
     </LinearLayout>
+
 
 
 

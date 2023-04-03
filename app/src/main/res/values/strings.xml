@@ -17,7 +17,6 @@
     <string name="Fono">Fono: </string>
     <string name="Email">Email: </string>
 
-
     <!--Button navegacion usuario -->
     <string name="IrLugaresInteres">Lugares de Interes</string>
     <string name="IrListaCompra">Listas de Compras</string>
@@ -32,5 +31,14 @@
     <string name="tipo_cosas">Tipo_Cosas</string>
     <string name="nombrelista">Nombrelista</string>
     <string name="activa">Activa</string>
+
+    <!--Recordatorio  -->
+
+    <string name="NombreRecordatorio">Recordatorios</string>
+    <string name="Dia">Dia</string>
+    <string name="Hora">Hora</string>
+
+
+
 
 </resources>

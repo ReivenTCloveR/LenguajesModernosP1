@@ -1,4 +1,4 @@
-package com.example.proyecto1;
+package com.example.proyecto1.List;
 
 public class ListElement {
     public String color;
@@ -6,6 +6,7 @@ public class ListElement {
     public String tipo;
     public String status;
 
+    //constructor
     public ListElement(String color, String name, String tipo, String status) {
         this.color = color;
         this.name = name;
@@ -13,12 +14,9 @@ public class ListElement {
         this.status = status;
     }
 
+    //get and set
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     public String getName() {

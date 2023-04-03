@@ -1,16 +1,17 @@
-package com.example.proyecto1;
+package com.example.proyecto1.List;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
-
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import android.content.Context;
-import android.view.ViewGroup;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.proyecto1.R;
 
 import java.util.List;
 
@@ -18,8 +19,8 @@ import java.util.List;
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     private List<ListElement> mdata;
-    private LayoutInflater mInflater;
-    private Context context;
+    private final LayoutInflater mInflater;
+    private final Context context;
 
     public ListAdapter(List<ListElement>itemList, Context context){
         this.mInflater = LayoutInflater.from(context);
@@ -29,18 +30,20 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public int getItemCount(){return mdata.size();}
+
     @Override
     public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
         View view = mInflater.inflate(R.layout.list_element, null);
-        return new ListAdapter.ViewHolder(view);
+        return new ViewHolder(view);
     }
-    @Override
+
     public void onBindViewHolder(final ListAdapter.ViewHolder holder, final int position){
         holder.bindData(mdata.get(position));
     }
+
     public void setItem(List<ListElement> items){mdata=items;}
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public static class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
         TextView name,tipo, status;
         ViewHolder(View itemView){
@@ -53,8 +56,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         void bindData (final ListElement item){
             iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             name.setText(item.getName());
-            tipo.setText(item.getName());
-            status.setText(item.getName());
+            tipo.setText(item.getTipo());
+            status.setText(item.getStatus());
         }
     }
 

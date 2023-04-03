@@ -11,6 +11,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.proyecto1.List.ListAdapter;
+import com.example.proyecto1.List.ListElement;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +32,29 @@ public class ListaCompras extends AppCompatActivity {
 
         init();
     }
+
+
+    /*Metodos para lista*/
+
+    public void init(){
+        elements = new ArrayList<>();
+        elements.add(new ListElement("#000000", "tomates","4", "Comprar"));
+        elements.add(new ListElement("#000000", "Lechuga","4", "Comprado"));
+        elements.add(new ListElement("#000000", "Pollo","1", "Comprar"));
+
+        ListAdapter listAdapter = new ListAdapter(elements, this);
+        RecyclerView recyclerView = findViewById(R.id.listRecyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(listAdapter);
+    }
+
+
+
+
+
+
+
     /* Todos los metodos del menu */
      public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_navegacion, menu);
@@ -61,22 +87,6 @@ public class ListaCompras extends AppCompatActivity {
                 return super.onOptionsItemSelected(menuItem);}
         return super.onOptionsItemSelected(menuItem);
         }
-
-    /*Metodos para lista*/
-
-    public void init(){
-        elements = new ArrayList<>();
-        elements.add(new ListElement("#00000=", "tomates","4", "Comprar"));
-        elements.add(new ListElement("#54326=", "Lechuga","4", "Comprado"));
-        elements.add(new ListElement("#00000=", "Pollo","4", "Comprar"));
-
-        ListAdapter listAdapter = new ListAdapter(elements, this);
-        RecyclerView recyclerView = findViewById(R.id.ListRecyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(listAdapter);
-    }
-
 
 
 
