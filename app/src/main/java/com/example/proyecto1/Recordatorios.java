@@ -84,11 +84,11 @@ public class Recordatorios extends AppCompatActivity implements View.OnClickList
         elements = new ArrayList<>();
         elements.add(new ListElementR("Compras Bebidas", "lun 03-04-2023","12:30","Desctivada"));
         elements.add(new ListElementR("Compras", "lun,vie","12:30","Activa"));
-        ListAdapter1 listAdapter = new ListAdapter1(elements, this);
+        ListAdapter1 listAdapter1 = new ListAdapter1(elements, this);
         RecyclerView recyclerView = findViewById(R.id.listRecordatorios);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(listAdapter);
+        recyclerView.setAdapter(listAdapter1);
 
     }
 
